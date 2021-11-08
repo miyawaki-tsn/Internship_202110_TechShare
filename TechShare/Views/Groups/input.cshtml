@@ -1,0 +1,43 @@
+﻿@model TechShare.Models.chat
+@{
+    ViewBag.Title = "input";
+    Layout = null;
+}
+
+@using (Html.BeginForm("Send", "Groups"))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model =>model.User.Id, new { @name = "UserId" })
+        @Html.HiddenFor(model => model.Group.Id, new {@name ="GroupId" })
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Text, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Text, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Text, "", new { @class = "text-danger" })
+
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="送信" class="btn btn-default" placeholder="文を入力してください" />
+            </div>
+        </div>
+
+    </div>
+}
+
+
+
+@*<div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }*@

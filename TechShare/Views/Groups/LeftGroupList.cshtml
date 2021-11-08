@@ -1,0 +1,74 @@
+﻿@*
+    @model IEnumerable<TechShare.Models.Group>
+
+
+    @{
+        ViewBag.Title = "LeftGroupList";
+    }
+
+    @{
+        Layout = null;
+    }
+    <h2>左</h2>
+*@
+
+@model IEnumerable<TechShare.Models.User>
+
+@{
+    ViewBag.Title = "LeftGroupList";
+}
+
+
+@{
+    Layout = null;
+}
+<td>
+    <img src="/Image1/Photo1.png" />
+</td>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.icon)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            
+           
+            @*グループに参加しているユーザー--------*@
+            
+           @* @Html.DisplayNameFor(users=>users.name)*@
+
+            @*--------------------------------------*@
+
+
+            <td>
+                @Html.DisplayFor(modelItem => item.icon)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+
+
+             <td>
+                @*@Html.ActionLink("チャット", "GroupChat", new { id = item.Id })    *@
+                @*@Html.ActionLink(item.icon, "GroupChat", new { id = item.Id })     *@
+
+@*                @Html.ActionLink(item.name, "Index", "Groups", new { id = item.Id }, "")*@
+
+                @*@Html.ActionLink("グループ名の編集", "Edit", new { id = item.Id })  *@
+                @*@Html.ActionLink("詳細", "Details", new { id = item.Id }) |         *@
+                @*@Html.ActionLink("グループの削除", "Delete", "Groups", new { id = item.Id }) *@
+              </td>
+
+        </tr>
+     }
+</table>

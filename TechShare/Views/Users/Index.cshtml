@@ -1,0 +1,100 @@
+﻿@model TechShare.Models.VM.Admin_VM
+
+@{
+  ViewBag.Title = "AdministratorScreen";
+}
+
+<h2>AdministratorScreen</h2>
+
+<a href="Groups/GroupList">トップ画面</a>
+@*<p>
+  @Html.ActionLink(
+  "トップ画面", 
+  "Create"
+  )*@
+</p>
+
+
+<form>
+  <table class="group_user">
+
+    @*ユーザー一覧見出し*@
+    <tr>
+      @*<th width="80">
+        @Html.DisplayNameFor(model => model.UserGroupID)
+      </th>*@
+
+      <th width="80">
+        @Html.DisplayNameFor(model => model.UserID)
+      </th>
+
+      <th width="80">
+        @Html.DisplayNameFor(model => model.UserIcon)
+      </th>
+
+      <th width="200">
+        @Html.DisplayNameFor(model => model.UserName)
+      </th>
+
+      <th width="100">
+        <p>削除ボタン</p>
+      </th>
+
+    </tr>
+
+    @*各ユーザーのデータ*@
+    <tr>
+      @foreach (var item in Model.user)
+      {
+
+        <td width="80">
+          @Html.DisplayFor(model => item.Id)
+        </td>
+   
+
+        <td width="80">
+          @Html.DisplayFor(model => item.icon)
+        </td>
+
+        <td width="200">
+          @Html.DisplayFor(model => item.Name)
+        </td>
+
+        <td>
+          @Html.ActionLink("削除", "Edit", new { id = item.Id })
+        </td>
+
+      }
+    </tr>
+
+
+
+  </table>
+</form>
+
+
+
+
+@*空行*@
+<p>
+
+
+</p>
+
+@using (Html.BeginForm("Details", "Users"))
+{
+  <div class="IDform">
+    @Html.LabelFor(model => model.UserIDLabel, htmlAttributes: new { @class = "control-label col-md-2" })
+    <div>
+      @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+      @Html.TextBoxFor(
+      model => model.user,
+      new { size = 30, maxlengt = 40 }
+      )
+      @*@Html.EditorFor(model => model.user, new { htmlAttributes = new { @class = "form-control" } })*@
+      @Html.ValidationMessageFor(model => model.user, "", new { @class = "text-danger" })
+    </div>
+  </div>
+}
+
+

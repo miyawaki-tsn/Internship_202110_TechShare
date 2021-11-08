@@ -1,0 +1,33 @@
+﻿@model TechShare.Models.VM.chat_VM
+
+@{
+    ViewBag.Title = "Index";
+    Layout = null;
+}
+
+<h2>全社員グループ</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+
+    @foreach (var item in Model.Chats)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Time)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.User.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Text)
+            </td>
+            @*<td>
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            </td>*@
+        </tr>
+    }
+
+</table>

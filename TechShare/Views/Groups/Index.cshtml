@@ -1,0 +1,77 @@
+﻿@model TechShare.Models.VM.chat_VM
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div style="
+    width:960px;
+    height:1080px;
+    background:#fff;
+    color:#000">
+
+    @*バックボタンのウィンドウ
+    <iframe src="http://localhost:59766/Groups/Back" width="100" height="100" scrolling="no"
+            style="position:absolute;
+            top:55px;
+            left:2px;
+            overflow:hidden;
+            z-index:10">
+    </iframe>
+        *@
+    @* 参加者表示画面のウィンドウ *@
+    <iframe src="http://localhost:59766/Groups/LeftGroupList?groupId=8" width="100" height="1045" scrolling="auto"
+            style="position:absolute;
+            top:55px;
+            left:2px;
+            overflow:hidden;
+            z-index:10">
+    </iframe>
+
+    @* グループ名を表示するウィンドウ 
+    <iframe src="http://localhost:59766/Groups/LeftGroupList?groupId=8" width="580" height="100" scrolling="no"
+            style="position:absolute;
+            top:55px;
+            left:102px;
+            overflow:hidden;
+            z-index:10">
+    </iframe>
+        *@
+
+    @* 検索機能を表示するウィンドウ 
+    <iframe src="http://localhost:59766/Groups/GroupList" width="100" height="100" scrolling="no"
+            style="position:absolute;
+            top:55px;
+            left:682px;
+            overflow:hidden;
+            z-index:10">
+    </iframe>
+        *@
+
+    @* チャット画面を表示するウィンドウ *@
+    <iframe src="http://localhost:59766/Chats/index?id=@(Model.Groups.Id)" width="680" height="850" scrolling="auto"
+            style="position:absolute;
+            top:55px;
+            left:102px;
+            overflow:hidden;
+            z-index:10">
+    </iframe>
+
+    @* チャット入力欄を表示するウィンドウ *@
+    <iframe src="http://localhost:59766/Groups/input?GroupId=@(Model.Groups.Id)&UserId=4" width="680" height="100" scrolling="auto"
+            style="position:absolute;
+            top:1000px;
+            left:102px;
+            overflow:hidden;
+            z-index:10">
+    </iframe>
+
+
+</div>
+
+
+
+
+
+
+
