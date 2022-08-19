@@ -3,3 +3,4 @@
 ![2021.10](https://img.shields.io/badge/開催日-2021.10-ff7964.svg?style=for-the-badge?style=for-the-badge)
 
 ### Thanks, N.O. T.K.  F.Y.
+![giphy](https://user-images.githubusercontent.com/110875161/183552084-b53b1cc3-ea45-4a90-a65f-9b640b1e8249.gif)
