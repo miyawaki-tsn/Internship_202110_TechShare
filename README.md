@@ -1,5 +1,6 @@
-![インターンシップ](https://img.shields.io/badge/インターンシップ-278ea5.svg?style=for-the-badge?style=for-the-badge)
-![2021.10](https://img.shields.io/badge/開催日-2021.10-ff7964.svg?style=for-the-badge?style=for-the-badge)
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/110875161/186331823-3f1c7c59-010b-4727-a4e7-0738be5ce290.png"/>
+</div>
 <div align="center">
   <h2>Tech Share -A communication tool which supports sharing infomation within your community!!! </h2>
 </div>
