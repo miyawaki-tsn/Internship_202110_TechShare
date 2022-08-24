@@ -1,4 +1,9 @@
 # TechShare
+<div align="center">
+<img src="https://user-images.githubusercontent.com/110875161/186289230-0285d202-865f-413f-8aee-5e165872c255.png"/>
+</div>
+
+
 ![インターンシップ](https://img.shields.io/badge/インターンシップ-278ea5.svg?style=for-the-badge?style=for-the-badge)
 ![2021.10](https://img.shields.io/badge/開催日-2021.10-ff7964.svg?style=for-the-badge?style=for-the-badge)
 
