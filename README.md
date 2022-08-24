@@ -1,5 +1,4 @@
-
-![logo](https://user-images.githubusercontent.com/92282222/186328474-95dd40e0-a876-4546-8ae8-d5f75215c1d9.png)
+![pinterest_profile_image](https://user-images.githubusercontent.com/92282222/186328622-cf13bcce-4851-434d-9086-2bca66090911.png)
 
 <div align="center">
   <h2>Tech Share -A communication tool which supports sharing infomation within your community!!! </h2>
